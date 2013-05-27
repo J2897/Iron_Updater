@@ -54,10 +54,10 @@ def find_proc(exe):
 			return True
 
 while find_proc('iron.exe'):
-	result = win32api.MessageBox(0, 'There is a new version of Iron available. Please close Iron and press OK to continue.', 'SRWare Iron Updater', 1)
-	if result == 1:
+	user_input = win32api.MessageBox(0, 'There is a new version of Iron available. Please close Iron and press OK to continue.', 'SRWare Iron Updater', 1)
+	if user_input == 1:
 		pass
-	elif result == 2:
+	elif user_input == 2:
 		stop()
 
 # Now download and install the new file...
